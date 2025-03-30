@@ -22,7 +22,7 @@ d3.csv("Superstore.csv").then(data => {
     });
 
     // Chart dimensions and margins
-    const margin = { top: 40, right: 40, bottom: 60, left: 60 },
+    const margin = { top: 40, right: 40, bottom: 70, left: 70 },
           width = 700,
           height = 400;
 
