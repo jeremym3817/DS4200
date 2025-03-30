@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superstore Data Analysis</title>
     <script src="main.js"></script>
     <link rel="stylesheet" href="main.css">
+    <style>
+        .arial {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+        }
+    </style>
 </head>
 
 <div class="content">
@@ -24,7 +37,7 @@
         <div>
             <h3>Geopandas Profit Plot</h3>
             <iframe src="m_profit.html" width="100%" height="1000px" style="border:black;"></iframe>
-            <p>This plot shows all US sales, profit, and bestselling categories from the Superstore in each state. At a
+            <p class = 'arial'>This plot shows all US sales, profit, and bestselling categories from the Superstore in each state. At a
                 glance, the profit is displayed by heat-map style of colors for 48 states depending on their profits,
                 with the legend on the left alerts the viewer of a state’s relative profit. When you hover over a state,
                 a viewer is given more in-depth data based on the state’s profit, sales, and bestselling category. </p>
