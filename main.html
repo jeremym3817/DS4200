@@ -28,10 +28,10 @@
         <h1>Superstore Data Analysis</h1>
 
         <h2>Overall Introduction</h2>
-        <p></p>
+        <p>Our dashboard sets out to examine the sales performance, customer behavior, and shipping trends within the Superstore dataset which contains nearly 10,000 customer transactions across the United States. We want to analyze how region, product category, customer segment, and shipping method influence both sales and profitability. We use visualizations such as a Sankey diagram to trace profit flow, a treemap breaking down category-level sales by region and state, a Geopandas map highlighting state-by-state profitability, and a D3 bar chart analyzing shipping class usage. These visualizations were created using Geopandas, Altair, and D3.js to provide both static and interactive insights. Our project specifically targets questions like which states drive the most revenue, what customer segments are the most valuable, and how shipping choices reflect consumer behavior. The goal is to transform these patterns into actionable insights for business areas such as inventory planning, regional marketing strategies, and logistics optimization.</p>
 
         <h2>Data Introduction</h2>
-        <p></p>
+        <p>Our data was collected from a public Kaggle dataset that represents customer orders from a large store, specifically where the customer is located and what they bought. The corresponding data frame has 9994 rows (observations) and 21 columns (features). Customer name, address, and product category are provided. This data allows us to explore questions like which products sell the most in certain regions, which regions bring in the largest amount of revenue, and the most popular shipping methods per region. We can uncover trends that help businesses make smarter decisions, like figuring out which products to promote more. Plus, this information is relevant because these kinds of insights are also applicable to many retail businesses as well.</p>
 
         <h2>5 Visualizations</h2>
         <div>
@@ -67,24 +67,41 @@
             <h3>Treemap of Category and Subcategory by Region and State</h3>
             <iframe src="treemap_superstore.html" width="100%" height="1000px" style="border:black;"></iframe>
             <p>This treemap is meant to display the categories and subcategories of products ordered by region of the USA
-               and also states. The map is interactive, and shows the current node, sales for the node, and parent node. 
+               and also states. The map is interactive, and shows the current node, sales for the node, and parent node.
                If you click on each of the smaller boxes/nodes, you are able to isolate the nodes you are interested in. Also, the
                parent nodes in the hierarchy are show in order at the top. You can "zoom back out" by clicking on the names of a
-               parent node. For the colorblind folks, the West region section is blue, East is red, Central is green, and 
+               parent node. For the colorblind folks, the West region section is blue, East is red, Central is green, and
                South is purple.</p>
-            <p>California by far appears to be the state with the most sales overall and by category. Thanks to California, the 
-                western USA is the region with the most sales, followed closely by eastern. The central and south regions follow, 
+            <p>California by far appears to be the state with the most sales overall and by category. Thanks to California, the
+                western USA is the region with the most sales, followed closely by eastern. The central and south regions follow,
                 with the southern region accounting for roughly half the sales of the largest western region.</p>
         </div>
         <div>
             <h3>Lineplot for Sales over time by Category</h3>
             <iframe src="lineplot.html" width="100%" height="1000px" style="border:black;"></iframe>
-            <p>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover over the plot, you can see 
+            <p>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover over the plot, you can see
+               sales for that date and the category for the sale.</p>
+            <p>There is a clear peak roughly in mid-March for technology sales at a litte more than 24,000.</p>
+            <p>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover over the plot, you can see
                sales for that date and the category for the sale. There are </p>
-            <p>There is a clear peak roughly in mid-March for technology sales at a litte more than 24,000. Other peaks by category 
-                are at April and October for each year for Technology and September 2016 for furniture. Office supplies appears 
+            <p>There is a clear peak roughly in mid-March for technology sales at a litte more than 24,000. Other peaks by category
+                are at April and October for each year for Technology and September 2016 for furniture. Office supplies appears
                 to be stable.</p>
         </div>
+        <div>
+            <h3>D3 Barplot</h3>
+            <iframe src="d3.html" width="100%" height="1000px" style="border:black;"></iframe>
+            <p>This barchart uses the D3 library to display superstore sales categorized by product type and shopping class.
+                Second class is represented by green, standard class is represented by orange, first class is represented by blue, and on the same day is pink.
+                The x-axis represents the three main different product types from the superstore. The y-axis represents the volume of the shipping method used.</p>
+            <p>Looking at the barchart we notice a few trends across the data. First, for every single product category, standard class leads in sales.
+                This makes it the most popular shipping category either for economic reasons or convenience.
+                We then see second class falling behind standard class at roughly ⅓ of standard class.
+                We then see first class as the third most popular option. There is an interesting observation to be made in the technology product category,
+                as second class and first class roughly have the same amount of volume. This could be as a result of consumers wanting their technology protected and delivered quickly.
+                We see same day shipping in the last palace for the bar plot possibly due to the high cost and frequency of use. </p>
+</div>
+
         <p></p>
 
         <h2>Summary of Findings</h2>

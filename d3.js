@@ -93,7 +93,7 @@ d3.csv("Superstore.csv").then(data => {
         .attr("x", -height / 2)
         .attr("y", -50)
         .attr("text-anchor", "middle")
-        .text("Sales");
+        .text("Shipping Volume");
 
     // Legend
     const legend = svg.selectAll(".legend")
