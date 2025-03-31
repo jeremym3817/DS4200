@@ -20,7 +20,7 @@
             color: #333;
             text-align: center;
             max-width: 80%;
-            margin: 0 auto; 
+            margin: 0 auto;
             padding-bottom: 12px;
         }
 
@@ -34,23 +34,42 @@
 <div class="content">
 
     <div id="Home" class="tabcontent">
-        <h1 class = 'arial'>Superstore Data Analysis</h1>
+        <h1 class='arial'>Superstore Data Analysis</h1>s
 
-        <h2 class = 'arial'>Overall Introduction</h2>
-        <p class = 'arial'>Our dashboard sets out to examine the sales performance, customer behavior, and shipping trends within the Superstore dataset which contains nearly 10,000 customer transactions across the United States. We want to analyze how region, product category, customer segment, and shipping method influence both sales and profitability. We use visualizations such as a Sankey diagram to trace profit flow, a treemap breaking down category-level sales by region and state, a Geopandas map highlighting state-by-state profitability, and a D3 bar chart analyzing shipping class usage. These visualizations were created using Geopandas, Altair, and D3.js to provide both static and interactive insights. Our project specifically targets questions like which states drive the most revenue, what customer segments are the most valuable, and how shipping choices reflect consumer behavior. The goal is to transform these patterns into actionable insights for business areas such as inventory planning, regional marketing strategies, and logistics optimization.</p>
+        <h2 class='arial'>Overall Introduction</h2>
+        <p class='arial'>Our dashboard sets out to examine the sales performance, customer behavior, and shipping trends
+            within the Superstore dataset which contains nearly 10,000 customer transactions across the United States.
+            We want to analyze how region, product category, customer segment, and shipping method influence both sales
+            and profitability. We use visualizations such as a Sankey diagram to trace profit flow, a treemap breaking
+            down category-level sales by region and state, a Geopandas map highlighting state-by-state profitability,
+            and a D3 bar chart analyzing shipping class usage. These visualizations were created using Geopandas,
+            Altair, and D3.js to provide both static and interactive insights. Our project specifically targets
+            questions like which states drive the most revenue, what customer segments are the most valuable, and how
+            shipping choices reflect consumer behavior. The goal is to transform these patterns into actionable insights
+            for business areas such as inventory planning, regional marketing strategies, and logistics optimization.
+        </p>
 
-        <h2 class = 'arial'>Data Introduction</h2>
-        <p class = 'arial'>Our data was collected from a public Kaggle dataset that represents customer orders from a large store, specifically where the customer is located and what they bought. The corresponding data frame has 9994 rows (observations) and 21 columns (features). Customer name, address, and product category are provided. This data allows us to explore questions like which products sell the most in certain regions, which regions bring in the largest amount of revenue, and the most popular shipping methods per region. We can uncover trends that help businesses make smarter decisions, like figuring out which products to promote more. Plus, this information is relevant because these kinds of insights are also applicable to many retail businesses as well.</p>
-
-        <h2 class = 'arial'>5 Visualizations</h2>
+        <h2 class='arial'>Data Introduction</h2>
+        <p class='arial'>Our data was collected from a public Kaggle dataset that represents customer orders from a
+            large store, specifically where the customer is located and what they bought. The corresponding data frame
+            has 9994 rows (observations) and 21 columns (features). Customer name, address, and product category are
+            provided. This data allows us to explore questions like which products sell the most in certain regions,
+            which regions bring in the largest amount of revenue, and the most popular shipping methods per region. We
+            can uncover trends that help businesses make smarter decisions, like figuring out which products to promote
+            more. Plus, this information is relevant because these kinds of insights are also applicable to many retail
+            businesses as well.</p>
+        d
         <div>
-            <h3 class = 'arial'>Geopandas Profit Plot</h3>
-            <iframe class = 'center-iframe-container' src="m_profit.html" width="100%" height="1000px" style="border:black;"></iframe>
-            <p class="arial">This plot shows all US sales, profit, and bestselling categories from the Superstore in each state. At a
+            <h3 class='arial'>Geopandas Profit Plot</h3>
+            <iframe class='center-iframe-container' src="m_profit.html" width="100%" height="1000px"
+                style="border:black;"></iframe>
+            <p class="arial">This plot shows all US sales, profit, and bestselling categories from the Superstore in
+                each state. At a
                 glance, the profit is displayed by heat-map style of colors for 48 states depending on their profits,
                 with the legend on the left alerts the viewer of a state’s relative profit. When you hover over a state,
                 a viewer is given more in-depth data based on the state’s profit, sales, and bestselling category. </p>
-            <p class = 'arial'>Analyzing the plot, it is clear that California and New York are by large the Superstore's most
+            <p class='arial'>Analyzing the plot, it is clear that California and New York are by large the Superstore's
+                most
                 profitable states, with $152M and $83M profits respectively. This makes most other states, even if they
                 are profitable, look minuscule in comparison through their orange color. It also displays how
                 unprofitable Texas is, with it losing $25M worth of profit, emphasized by its bright red color. It is
@@ -60,12 +79,15 @@
                 analysis on a state-by-state basis. </p>
         </div>
         <div>
-            <h3 class = 'arial'>Sanskey Region to Segment</h3>
-            <iframe class = 'center-iframe-container' src="sanskey.html" width="100%" height="1000px" style="border:black;"></iframe>
-            <p class = 'arial'>Our sanskey plot is used to show the flow of profit between regions to states and states to the segment
+            <h3 class='arial'>Sanskey Region to Segment</h3>
+            <iframe class='center-iframe-container' src="sanskey.html" width="100%" height="1000px"
+                style="border:black;"></iframe>
+            <p class='arial'>Our sanskey plot is used to show the flow of profit between regions to states and states to
+                the segment
                 of buyer. The key is interactive and allows users to hover over edges between nodes to view what region
                 produces the most profit and what demographic of buyer each state benefits from the most. </p>
-            <p class = 'arial'>In this case, California and New York take up the majority of the traffic in the west and east
+            <p class='arial'>In this case, California and New York take up the majority of the traffic in the west and
+                east
                 respectively, while other states pick up the rest of the profit. It's also important to note that
                 consumer purchases are the Superstore's largest segment of profit, with it being more than both
                 corporate and home office purchases combined. Based on the sanskey, it seems it would be particularly
@@ -73,48 +95,78 @@
                 maximize profits. </p>
         </div>
         <div>
-            <h3 class = 'arial'>Treemap of Category and Subcategory by Region and State</h3>
-            <iframe class = 'center-iframe-container' src="treemap_superstore.html" width="100%" height="1000px" style="border:black;"></iframe>
-            <p class = 'arial'>This treemap is meant to display the categories and subcategories of products ordered by region of the USA
-               and also states. The map is interactive, and shows the current node, sales for the node, and parent node.
-               If you click on each of the smaller boxes/nodes, you are able to isolate the nodes you are interested in. Also, the
-               parent nodes in the hierarchy are show in order at the top. You can "zoom back out" by clicking on the names of a
-               parent node. For the colorblind folks, the West region section is blue, East is red, Central is green, and
-               South is purple.</p>
-            <p class = 'arial'>California by far appears to be the state with the most sales overall and by category. Thanks to California, the
-                western USA is the region with the most sales, followed closely by eastern. The central and south regions follow,
+            <h3 class='arial'>Treemap of Category and Subcategory by Region and State</h3>
+            <iframe class='center-iframe-container' src="treemap_superstore.html" width="100%" height="1000px"
+                style="border:black;"></iframe>
+            <p class='arial'>This treemap is meant to display the categories and subcategories of products ordered by
+                region of the USA
+                and also states. The map is interactive, and shows the current node, sales for the node, and parent
+                node.
+                If you click on each of the smaller boxes/nodes, you are able to isolate the nodes you are interested
+                in. Also, the
+                parent nodes in the hierarchy are show in order at the top. You can "zoom back out" by clicking on the
+                names of a
+                parent node. For the colorblind folks, the West region section is blue, East is red, Central is green,
+                and
+                South is purple.</p>
+            <p class='arial'>California by far appears to be the state with the most sales overall and by category.
+                Thanks to California, the
+                western USA is the region with the most sales, followed closely by eastern. The central and south
+                regions follow,
                 with the southern region accounting for roughly half the sales of the largest western region.</p>
         </div>
         <div>
-            <h3 class = 'arial'>Lineplot for Sales Over Time by Category</h3>
-            <iframe class = 'center-iframe-container' src="lineplot.html" width="100%" height="500px" style="border:black;"></iframe>
-            <p class = 'arial'>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover over the plot, you can see
-               sales for that date and the category for the sale.</p>
-            <p class = 'arial'>There is a clear peak roughly in mid-March for technology sales at a litte more than 24,000. Other peaks by category
-                are at April and October for each year for Technology and September 2016 for furniture. Office supplies appears
+            <h3 class='arial'>Lineplot for Sales Over Time by Category</h3>
+            <iframe class='center-iframe-container' src="lineplot.html" width="100%" height="500px"
+                style="border:black;"></iframe>
+            <p class='arial'>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover
+                over the plot, you can see
+                sales for that date and the category for the sale.</p>
+            <p class='arial'>There is a clear peak roughly in mid-March for technology sales at a litte more than
+                24,000. Other peaks by category
+                are at April and October for each year for Technology and September 2016 for furniture. Office supplies
+                appears
                 to be stable.</p>
         </div>
         <div>
-            <h3 class = 'arial'>D3 Barplot</h3>
-            <iframe class = 'center-iframe-container' src="d3.html" width="100%" height="510px" style="border:black;"></iframe>
-            <p class = 'arial'>This barchart uses the D3 library to display superstore sales categorized by product type and shopping class.
-                Second class is represented by green, standard class is represented by orange, first class is represented by blue, and on the same day is pink.
-                The x-axis represents the three main different product types from the superstore. The y-axis represents the volume of the shipping method used.</p>
-            <p class = 'arial'>Looking at the barchart we notice a few trends across the data. First, for every single product category, standard class leads in sales.
+            <h3 class='arial'>D3 Barplot</h3>
+            <iframe class='center-iframe-container' src="d3.html" width="100%" height="510px"
+                style="border:black;"></iframe>
+            <p class='arial'>This barchart uses the D3 library to display superstore sales categorized by product type
+                and shopping class.
+                Second class is represented by green, standard class is represented by orange, first class is
+                represented by blue, and on the same day is pink.
+                The x-axis represents the three main different product types from the superstore. The y-axis represents
+                the volume of the shipping method used.</p>
+            <p class='arial'>Looking at the barchart we notice a few trends across the data. First, for every single
+                product category, standard class leads in sales.
                 This makes it the most popular shipping category either for economic reasons or convenience.
                 We then see second class falling behind standard class at roughly ⅓ of standard class.
-                We then see first class as the third most popular option. There is an interesting observation to be made in the technology product category,
-                as second class and first class roughly have the same amount of volume. This could be as a result of consumers wanting their technology protected and delivered quickly.
-                We see same day shipping in the last palace for the bar plot possibly due to the high cost and frequency of use. </p>
-</div>
+                We then see first class as the third most popular option. There is an interesting observation to be made
+                in the technology product category,
+                as second class and first class roughly have the same amount of volume. This could be as a result of
+                consumers wanting their technology protected and delivered quickly.
+                We see same day shipping in the last palace for the bar plot possibly due to the high cost and frequency
+                of use. </p>
+        </div>
 
         <p></p>
 
-        <h2 class = 'arial'>Summary of Findings</h2>
-        <p class = 'arial'>After analysis of our data via visualizations, many of our assumptions were backed by our data. The west and east regions dominant profit margins for the Superstore, with California and New York accounting for over 50% of profit in the US. It is also worth noting that many southern states, particularly Texas are in the red, bleeding profit at a very high rate despite sales. If I were the Superstore, my goal would be to focus on the south to better understand why profits are poor (we believe it has to do with the category of sales being made). Our findings also show that consumers are the main demographic of buyers, and office supplies are best sellers because of their price/demand ratio. </p>
-        <p class = 'arial'>In future analysis of this data, designing a map that can better find the split of categories/sub-categories by purchase would be an objective. This could help gain a more concrete understanding of why a product sells well or poorly. These types of visualizations along with the aid of a predictive model would be the next step to understanding the data given and making predictions in the future based on said findings. </p>
+        <h2 class='arial'>Summary of Findings</h2>
+        <p class='arial'>After analysis of our data via visualizations, many of our assumptions were backed by our data.
+            The west and east regions dominant profit margins for the Superstore, with California and New York
+            accounting for over 50% of profit in the US. It is also worth noting that many southern states, particularly
+            Texas are in the red, bleeding profit at a very high rate despite sales. If I were the Superstore, my goal
+            would be to focus on the south to better understand why profits are poor (we believe it has to do with the
+            category of sales being made). Our findings also show that consumers are the main demographic of buyers, and
+            office supplies are best sellers because of their price/demand ratio. </p>
+        <p class='arial'>In future analysis of this data, designing a map that can better find the split of
+            categories/sub-categories by purchase would be an objective. This could help gain a more concrete
+            understanding of why a product sells well or poorly. These types of visualizations along with the aid of a
+            predictive model would be the next step to understanding the data given and making predictions in the future
+            based on said findings. </p>
 
-        <h4 class = 'arial'>Developed by Jeremy Marino, Ray Gutierrez, Daniel Zeng</h4>
+        <h4 class='arial'>Developed by Jeremy Marino, Ray Gutierrez, Daniel Zeng</h4>
     </div>
 
 </div>
