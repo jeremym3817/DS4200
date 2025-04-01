@@ -10,25 +10,6 @@
     <title>Superstore Data Analysis</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
-    <style>
-        .arial {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #333;
-            text-align: center;
-            max-width: 80%;
-            margin: 0 auto;
-            padding-bottom: 12px;
-        }
-
-        .center-iframe-container {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 <button class="tablink" onclick="openTab('Home', this)" id="defaultOpen">Home</button>
@@ -44,7 +25,9 @@
 <div class="content">
 
     <div id="Home" class="tabcontent">
-        <h1 class='arial'>Superstore Data Analysis</h1>
+        <header>
+            <h1 class='arial'>Superstore Data Analysis</h1>
+        </header>
 
         <h2 class='arial'>Overall Introduction</h2>
         <p class='arial'>Our dashboard sets out to examine the sales performance, customer behavior, and shipping trends
@@ -60,7 +43,19 @@
         </p>
 
         <h2 class = 'arial'>Data Introduction</h2>
-        <p class = 'arial'>Our data was collected from a public Kaggle dataset that represents customer orders from a large store, specifically where the customer is located and what they bought. The corresponding data frame has 9994 rows (observations) and 21 columns (features). Customer name, address, and product category are provided. This data allows us to explore questions like which products sell the most in certain regions, which regions bring in the largest amount of revenue, and the most popular shipping methods per region. We can uncover trends that help businesses make smarter decisions, like figuring out which products to promote more. Plus, this information is relevant because these kinds of insights are also applicable to many retail businesses as well.</p>
+        <p class = 'arial'>Our data was collected from a public Kaggle dataset that represents customer orders from a large store, 
+            specifically where the customer is located and what they bought. The corresponding data frame has 9994 rows 
+            (observations) and 21 columns (features). Customer name, address, and product category are provided. This data allows 
+            us to explore questions like which products sell the most in certain regions, which regions bring in the largest amount 
+            of revenue, and the most popular shipping methods per region. We can uncover trends that help businesses make smarter 
+            decisions, like figuring out which products to promote more. Plus, this information is relevant because these kinds of 
+            insights are also applicable to many retail businesses as well.
+        </p>
+
+        <h2 class='arial'>Feature Description</h2>
+        <p class='arial'>
+        </p>
+
     </div>
 
     <div id="Visualizations" class="tabcontent">
@@ -75,8 +70,7 @@
                 with the legend on the left alerts the viewer of a state’s relative profit. When you hover over a state,
                 a viewer is given more in-depth data based on the state’s profit, sales, and bestselling category. </p>
             <p class='arial'>Analyzing the plot, it is clear that California and New York are by large the Superstore's
-                most
-                profitable states, with $152M and $83M profits respectively. This makes most other states, even if they
+                most profitable states, with $152M and $83M profits respectively. This makes most other states, even if they
                 are profitable, look minuscule in comparison through their orange color. It also displays how
                 unprofitable Texas is, with it losing $25M worth of profit, emphasized by its bright red color. It is
                 also worth mentioning that the majority of the best-selling category is in office supplies, which is
@@ -117,8 +111,7 @@
         </div>
         <div>
             <h3 class='arial'>Lineplot for Sales Over Time by Category</h3>
-            <iframe class='center-iframe-container' src="lineplot.html" width="100%" height="500px"
-                style="border:black;"></iframe>
+                <iframe class='center-iframe-container' src="lineplot.html" width="100%" height="500px" style="border:black;"></iframe>
             <p class='arial'>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover
                 over the plot, you can see sales for that date and the category for the sale.</p>
             <p class='arial'>There is a clear peak roughly in mid-March for technology sales at a little more than

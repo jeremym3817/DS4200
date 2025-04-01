@@ -51,4 +51,31 @@ html, body {
     height: 100%;
   }
   
- 
+  .arial {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 12px;
+}
+
+.center-iframe-container {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background: #6667ad;
+    color: #010510;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.plot-container {
+  text-align: center;
+}
