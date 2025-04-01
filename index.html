@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Superstore Data Analysis</title>
-    <script src="main.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
     <style>
         .arial {
             font-family: Arial, sans-serif;
@@ -31,6 +31,16 @@
     </style>
 </head>
 
+<button class="tablink" onclick="openTab('Home', this)" id="defaultOpen">Home</button>
+<script>
+    window.onload = function() {
+    document.getElementById("defaultOpen").click();
+    };
+</script>
+
+<button class="tablink" onclick="openTab('Visualizations', this)">Visualizations</button>
+<button class="tablink" onclick="openTab('Conclusion', this)">Conclusion</button>
+
 <div class="content">
 
     <div id="Home" class="tabcontent">
@@ -41,7 +51,9 @@
 
         <h2 class = 'arial'>Data Introduction</h2>
         <p class = 'arial'>Our data was collected from a public Kaggle dataset that represents customer orders from a large store, specifically where the customer is located and what they bought. The corresponding data frame has 9994 rows (observations) and 21 columns (features). Customer name, address, and product category are provided. This data allows us to explore questions like which products sell the most in certain regions, which regions bring in the largest amount of revenue, and the most popular shipping methods per region. We can uncover trends that help businesses make smarter decisions, like figuring out which products to promote more. Plus, this information is relevant because these kinds of insights are also applicable to many retail businesses as well.</p>
+    </div>
 
+    <div id="Visualizations" class="tabcontent">
         <h2 class = 'arial'>5 Visualizations</h2>
         <div>
             <h3 class = 'arial'>Geopandas Profit Plot</h3>
@@ -109,12 +121,15 @@
                 We then see first class as the third most popular option. There is an interesting observation to be made in the technology product category,
                 as second class and first class roughly have the same amount of volume. This could be as a result of consumers wanting their technology protected and delivered quickly.
                 We see same day shipping in the last palace for the bar plot possibly due to the high cost and frequency of use. </p>
-</div>
-
+        </div>
+    </div>
+    <div id="Conclusion" class="tabcontent">
         <p></p>
 
         <h2 class = 'arial'>Summary of Findings</h2>
         <p class = 'arial'>After analysis of our data via visualizations, many of our assumptions were backed by our data. The west and east regions dominant profit margins for the Superstore, with California and New York accounting for over 50% of profit in the US. It is also worth noting that many southern states, particularly Texas are in the red, bleeding profit at a very high rate despite sales. If I were the Superstore, my goal would be to focus on the south to better understand why profits are poor (we believe it has to do with the category of sales being made). Our findings also show that consumers are the main demographic of buyers, and office supplies are best sellers because of their price/demand ratio. </p>
+
+        <h2 class = 'arial'>Improvements for Further Analysis</h2>
         <p class = 'arial'>In future analysis of this data, designing a map that can better find the split of categories/sub-categories by purchase would be an objective. This could help gain a more concrete understanding of why a product sells well or poorly. These types of visualizations along with the aid of a predictive model would be the next step to understanding the data given and making predictions in the future based on said findings. </p>
 
         <h4 class = 'arial'>Developed by Jeremy Marino, Ray Gutierrez, Daniel Zeng</h4>
