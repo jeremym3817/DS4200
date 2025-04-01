@@ -1,4 +1,4 @@
-d3.csv("Superstore.csv").then(data => {
+d3.csv("CSV_FILE/Superstore.csv").then(data => {
     data.forEach(d => d.Sales = +d.Sales);
 
     // Group sales by category and ship mode
