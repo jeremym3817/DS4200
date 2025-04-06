@@ -11,7 +11,7 @@ d3.csv("CSV_FILE/Superstore.csv").then(data => {
 
     // Extract categories and shipping mode
     const categories = Array.from(nestedData.keys());
-    const shipModes = Array.from(new Set(data.map(d => d["Ship Mode"])));
+    const shipModes = ["Standard Class", "Second Class", "First Class", "Same Day"];
 
     // Change data into an array
     const barData = [];
@@ -19,6 +19,14 @@ d3.csv("CSV_FILE/Superstore.csv").then(data => {
         shipMap.forEach((sales, shipMode) => {
             barData.push({ Category: category, ShipMode: shipMode, Sales: sales });
         });
+    });
+
+    // Sort barData by sales within each category
+    barData.sort((a, b) => {
+        if (a.Category === b.Category) {
+            return b.Sales - a.Sales; // Sort by sales descending
+        }
+        return categories.indexOf(a.Category) - categories.indexOf(b.Category);
     });
 
     // Chart dimensions and margins
@@ -50,7 +58,7 @@ d3.csv("CSV_FILE/Superstore.csv").then(data => {
 
     const color = d3.scaleOrdinal()
         .domain(shipModes)
-        .range(d3.schemeSet2);
+        .range(["#ffcc00", "#ff9900", "#ff6600", "#ff3300"]);
 
     // X-axis
     svg.append("g")
