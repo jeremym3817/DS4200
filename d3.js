@@ -21,14 +21,6 @@ d3.csv("CSV_FILE/Superstore.csv").then(data => {
         });
     });
 
-    // Sort barData by sales within each category
-    barData.sort((a, b) => {
-        if (a.Category === b.Category) {
-            return b.Sales - a.Sales; // Sort by sales descending
-        }
-        return categories.indexOf(a.Category) - categories.indexOf(b.Category);
-    });
-
     // Chart dimensions and margins
     const margin = { top: 40, right: 40, bottom: 70, left: 70 },
           width = 700,
@@ -73,7 +65,6 @@ d3.csv("CSV_FILE/Superstore.csv").then(data => {
         .data(categories)
         .enter()
         .append("g")
-        .attr("class", "category")
         .attr("transform", d => `translate(${x0(d)},0)`)
         .selectAll("rect")
         .data(category => shipModes.map(mode => {
