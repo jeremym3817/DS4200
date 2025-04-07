@@ -98,7 +98,7 @@
 
     <div id="Visualizations" class="tabcontent">
         <h2 class = 'arial'>5 Visualizations</h2>
-        <div>
+        <div class="plot-container">
             <h3 class='arial'>Geopandas Profit Plot</h3>
             <iframe class='center-iframe-container' src="m_profit.html" width="100%" height="1000px"
                 style="border:black;"></iframe>
@@ -115,15 +115,20 @@
                 most likely because of their high-volume demand and low cost compared to other categories. This graph is
                 particularly useful for finding where business successes and liabilities are, along with getting
                 analysis on a state-by-state basis. </p>
+                
+            <ul class='myUL'>
+                <li>Allows users to find profits state by state</li>
+                <li>Color represents states gaining/bleeding profit based on the legend</li>
+                <li>New York and California are the highest earners while Texas is losing profit</li>
+            </ul>
         </div>
-        <div>
-            <h3 class='arial'>Sanskey Region to Segment</h3>
-            <iframe class='center-iframe-container' src="sanskey.html" width="100%" height="1000px"
-                style="border:black;"></iframe>
-            <p class='arial'>Our sanskey plot is used to show the flow of profit between regions to states and states to
+        <div class="plot-container">
+            <h3 class='arial'>Interactive Segment Profit Barplot</h3>
+            <iframe src="state_segment_barplot.html" style="width: 100%; height: 900px; border: none; overflow: visible;" style="border:black;"></iframe>
+            <p class='arial'>Our interactive barplot is used to show the flow of profit between states to
                 the segment
-                of buyer. The key is interactive and allows users to hover over edges between nodes to view what region
-                produces the most profit and what demographic of buyer each state benefits from the most. </p>
+                of buyer. The plot allows users to toggle the segment of buyer by clicking on the legend to view 
+                what demographic of buyer each state benefits from the most. </p>
             <p class='arial'>In this case, California and New York take up the majority of the traffic in the west and
                 east
                 respectively, while other states pick up the rest of the profit. It's also important to note that
@@ -131,8 +136,14 @@
                 corporate and home office purchases combined. Based on the sanskey, it seems it would be particularly
                 useful to continue targeting the consumer bases in their big demographics in the east and west to
                 maximize profits. </p>
+
+                <ul class='myUL'>
+                    <li>Allows users to find profits by segment</li>
+                    <li>The segment toggle allows users to compare or isolation buyer demographics</li>
+                    <li>The consumer population is the largest source of income for the Superstore</li>
+                </ul>
         </div>
-        <div>
+        <div class="plot-container">
             <h3 class='arial'>Treemap of Category and Subcategory by Region and State</h3>
             <iframe class='center-iframe-container' src="treemap_superstore.html" width="100%" height="1000px"
                 style="border:black;"></iframe>
@@ -149,7 +160,7 @@
                 the most sales, followed closely by Eastern, and later by the Central and South regions. The Southern region 
                 accounts for roughly half the sales of the largest Western region.</p>
         </div>
-        <div>
+        <div class="plot-container">
             <h3 class='arial'>Lineplot for Sales Over Time by Category</h3>
                 <iframe class='plot-container' src="lineplot.html" width="100%" height="1000px" style="border:black;"></iframe>
             <p class='arial'>This lineplot shows sales over a period of 3 years (2014-2017) by category. If you hover
@@ -162,7 +173,7 @@
                 spikes, indicating likely major promotional events and large orders. Furniture and office supplies sales 
                 occasionally peak but are usually stable.</p>
         </div>
-        <div>
+        <div class="plot-container">
             <h3 class='arial'>Shipping Method Preferences by Product Category</h3>
             <iframe class='center-iframe-container' src="d3.html" width="100%" height="510px"
                 style="border:black;"></iframe>
@@ -190,12 +201,27 @@
                         goal would be to focus research on the south to better understand why profits are poor (we believe it must be 
                         due to the category of sales made). Our findings show that office supplies are best sellers because of their 
                         price/demand ratio. </p>
+        <div class="plot-container">
+            <ul class='myUL'>
+                <li>California and New York dominate US profit, while Texas is very far in the red</li>
+                <li>Data is useful to make future business decisions for minimizing southern losses/maximizing profits</li>
+                <li>Office supplies are best sellers because of their price/demand ratio</li>
+                <li>Technology has the best returns but can be costly as demonstrated in Texas</li>
+            </ul>
+        </div>
 
         <h2 class = 'arial'>Improvements for Further Analysis</h2>
         <p class = 'arial'>In future analysis of this data, designing a map that can better find the split of 
             categories/sub-categories by purchase would be an objective. This could help gain a more concrete understanding of why 
             a product sells well or poorly. These types of visualizations, along with the aid of a predictive model, would be the 
             next step to understanding the data given and making predictions in the future based on said findings. </p>
+        <div class="plot-container">
+            <ul class='myUL'>
+                <li>Find the split of categories/sub-categories by purchase</li>
+                <li>Predictive business model</li>
+                <li>Find out more about our demographic via customer data</li>
+            </ul>
+        </div>
 
         <h4 class='arial'>Developed by Jeremy Marino, Ray Gutierrez, Daniel Zeng</h4>
     </div>
