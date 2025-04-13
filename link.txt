@@ -1,3 +1,47 @@
 Website Link:
-
 https://jeremym3817.github.io/DS4200/
+
+
+Design of visualizations
+
+Plotly Map: We used the plotly map of the states to give a geographic perspective for the viewer to see the profit breakdown based 
+on location. This allows the viewer to make connections from what they know about a particular area in terms of wealth, population, 
+etc along with our other data about the superstore. In terms of marks, this graph uses area (namely the area of the state) to 
+display the size of the state in comparison to its profit margins. For channels, the use of color tells a viewer what each state is 
+making profit wise, along with vertical and horizontal position to explain where a state is. This coincides with a legend that gives 
+the viewer an image of the big picture look of how our profits are distributed.  
+
+
+Inactive barplot: 
+
+Originally using a sanskey, we made the switch to an interactive bar plot to better show how our profit was distributed by segment 
+of customers. The plot allows viewers to isolate segments of buyers and see how they scale by state and profit compared to other 
+segments. This uses area/lines marks to display the quantitative values of the plot (profit), along with a horizontal and vertical 
+position to give the positions of the bars (state and profit respectively) and the color to distinguish by segment of buyers. This 
+will give the user more viewing options them the sanskey and allow them to come to simple conclusions about the demographics of the 
+superstore.  
+
+
+Treemap 
+
+We generated a treemap using plotly express to represent the categories and subcategories to best visually illustrate the relative 
+proportions of each. Marks used in this plot are the rectangles for each of the nodes in the tree map. Channels used in the treemap 
+include position (locations of each rectangle in the hierarchy), size (of rectangle), color (of each rectangle based on category), 
+and shape (rectangle). 
+
+
+Lineplot 
+
+We generated a line plot using python’s Altair library to depict sales quantities over a period of three years. Marks used in the 
+plot are the lines for each of the categories. Channels are position (x and y coordinates of each data point), color (of each line), 
+and length (of each line).  
+
+
+D3 Grouped Barplot 
+
+This grouped bar chart, built with D3.js, displays shipping method preferences across Furniture, Office Supplies, and Technology. 
+Each rectangle mark represents total sales volume for a specific shipping method within a category. X-axis position separates 
+product categories and groups the four shipping methods; y-axis position shows sales volume. Color distinguishes shipping 
+methods: Standard Class (yellow), Second Class (orange), First Class (dark orange), and Same Day (red). Bar height encodes sales 
+magnitude. Standard Class leads in all categories, while Same Day has the lowest volume. The plot uses position, color, and length 
+channels to compare shipping behavior by product type. 
