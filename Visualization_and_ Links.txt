@@ -2,6 +2,22 @@ Website Link:
 https://jeremym3817.github.io/DS4200/
 
 
+Reference Links
+
+Super store Analysis 🏪| Data Visual. | Seaborn🔴 
+https://www.kaggle.com/code/ashwinshetgaonkar/super-store-analysis-data-visual-seaborn
+
+This visualization is derived from the same data displays the distribution of shipping modes. We clearly see that standard class is the most prominent shipping mode. 
+This reference page breaks down every step from importing libraries to complex analysis like profit distribution with violin plots.  
+
+Data Analysis for Marketing Strategy 
+https://www.kaggle.com/code/sasakitetsuya/data-analysis-for-marketing-strategy
+
+This visualization from the Data Analysis for Marketing Strategy reference paper ranks the top 20 cities by profit. 
+We see that New York, California, and Seattle dominate sales, leading every other city by a significant margin. 
+This reference paper contains less complex but more encompassing visualizations than the other reference paper.   
+
+
 Design of visualizations
 
 Plotly Map: We used the plotly map of the states to give a geographic perspective for the viewer to see the profit breakdown based 
